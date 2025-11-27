@@ -43,6 +43,6 @@
 ![Dupilot 포스터](../resource/Dupilot-poster.jpg)
 
 ## 시연 영상
-<video src="../resource/Dupilot-Showcase.mp4" controls width="100%">
-  Your browser does not support the video tag.
-</video>
+<a href="#">
+  <img src="../resource/Dupilot-Showcase.jpg" alt="Dupilot 시연 영상 보기" width="100%" />
+</a>
