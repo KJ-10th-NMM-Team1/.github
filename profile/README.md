@@ -13,5 +13,5 @@
 - 보컬 마켓 플레이스: 커스텀 보컬을 업로드·거래·적용할 수 있는 공간.
 
 ## Resources
-- 프로젝트 소개 PDF: [Dupilot 소개서](./Dupilot-Overview.pdf)
+- 프로젝트 소개 PDF: [Dupilot 포스터](../Dupilot-Overview.pdf)
 
