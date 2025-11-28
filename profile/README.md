@@ -1,6 +1,6 @@
 # 🎬 AI 자동 더빙 서비스 Dupilot
 
-![Dupilot 포스터](../resource/Dupilot-poster.jpg)
+![Dupilot 포스터](../resource/landing_page1.png)
 
 - ~~배포 URL : https://dupilot.com/~~ (배포 예정)
   > ❗ Notice: 현재 서비스 준비 중입니다.
@@ -52,7 +52,8 @@ Dupilot 서비스의 주요 기능을 담은 시연 영상입니다.
 
 ## 2. 시스템 아키텍처
 
-Dupilot 서비스는 Docker Compose 기반의 마이크로서비스 아키텍처로 구성되었습니다.  
+![Dupilot 시스템 아키텍처](../resource/Dupilot-poster.jpg)
+Dupilot 서비스는 Docker Compose 기반의 아키텍처로 구성되었습니다.  
 Frontend는 React/Vite로 프로젝트 생성·목록·편집 UI와 타임라인/파형 기반 더빙 편집 기능을 제공합니다.  
 Backend는 FastAPI로 인증/프로젝트/작업 API 게이트웨이 역할을 하며, MongoDB에 데이터를 저장하고 S3에 파일을 관리합니다.  
 SQS를 통해 STT/TTS 파이프라인을 트리거하며, STT-TTS-Worker는 WhisperX로 음성 인식 → 번역/싱크 → CosyVoice 등 TTS로 합성 → ffmpeg로 mux하여 더빙 영상/오디오를 산출합니다.  
@@ -116,7 +117,7 @@ SQS를 통해 STT/TTS 파이프라인을 트리거하며, STT-TTS-Worker는 Whis
 - Job 큐(SQS) 기반 비동기 처리로 대용량 파일도 안정적으로 처리합니다.
 - 결과 메타데이터와 파일 경로를 API로 반환하여 실시간으로 진행 상황을 확인할 수 있습니다.
 
-![자동 더빙 기능 스크린샷](../resource/auto-dubbing-screenshot.jpg)
+![자동 더빙 기능 스크린샷](../resource/episode_create_modal2.png)
 
 <br>
 
@@ -126,7 +127,7 @@ SQS를 통해 STT/TTS 파이프라인을 트리거하며, STT-TTS-Worker는 Whis
 - 프리뷰 재생, 구간 선택/수정 기능을 제공합니다.
 - 추후 멀티트랙·다국어 확장을 위한 구조로 설계되었습니다.
 
-![에디터 스크린샷](../resource/editor-screenshot.jpg)
+![에디터 스크린샷](../resource/editor_page5.png)
 
 <br>
 
@@ -135,6 +136,12 @@ SQS를 통해 STT/TTS 파이프라인을 트리거하며, STT-TTS-Worker는 Whis
 - 커스텀 보이스 업로드/적용을 위한 마켓 플레이스 컨셉입니다.
 - 향후 거래/적용 플로우 연동 예정입니다 (보이스 메타데이터 관리 포함).
 
-![보이스 마켓 스크린샷](../resource/voice-market-screenshot.jpg)
+![보이스 마켓 스크린샷](../resource/voicemarket_page1.png)
 
 <br>
+
+### [보이스 클로닝]
+
+- 사용자의 보이스를 업로드하여 자신의 목소리로 보이스샘플을 만들 수 있습니다.
+
+![보이스 클로닝 스크린샷](../resource/voicecloning_page4.png)
